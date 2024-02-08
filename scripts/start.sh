@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ROOT_PATH="/home/ubuntu/test"
+ROOT_PATH="/home/ubuntu/ci-cd-test"
 JAR="$ROOT_PATH/application.jar"
 
 APP_LOG="$ROOT_PATH/application.log"
@@ -10,7 +10,7 @@ START_LOG="$ROOT_PATH/start.log"
 NOW=$(date +%c)
 
 echo "[$NOW] $JAR 복사" >> $START_LOG
-cp $ROOT_PATH/build/libs/test-1.0.0.jar $JAR
+cp $ROOT_PATH/build/libs/ci-cd-test-1.0.0.jar $JAR
 
 echo "[$NOW] > $JAR 실행" >> $START_LOG
 nohup java -jar $JAR > $APP_LOG 2> $ERROR_LOG &
